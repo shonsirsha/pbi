@@ -12,10 +12,62 @@
   src: url("../fonts/Proxima Nova Bold.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Circular Std Book";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Circular Std Book.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.mt-8 {
+  margin-top: 8px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+.btn {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  background: #a62331;
+}
+
+.btn-primary {
+  background: #a62331;
+}
+
+.btn-hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 180px;
+  align-items: center;
+}
+
+.btn-text {
+  font-family: "ProximaNova-Regular", sans-serif;
+  font-size: 14px;
 }
 
 .h1-style {
@@ -28,6 +80,8 @@
   font-size: 32px;
 }
 .hero-sub {
+  font-family: "Circular Std Book", sans-serif;
+  font-size: 16px;
 }
 .light {
   color: white;
@@ -43,8 +97,22 @@
   margin: auto;
   padding: 24px 64px;
 }
-
+.small {
+  font-size: 14px;
+}
+.flex-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
 /* Nav */
+#menu {
+  cursor: pointer;
+}
 .main-nav {
   display: flex;
   align-items: center;
@@ -102,7 +170,7 @@ ul {
   list-style: none;
 }
 
-.btn {
+/* .btn {
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -111,7 +179,7 @@ ul {
   background: #262626;
   color: #fff;
   font-size: 15px;
-}
+} */
 
 .btn:hover {
   opacity: 0.9;
@@ -147,15 +215,30 @@ ul {
 }
 
 .hero > div:nth-child(even) {
-  padding-top: 16px;
-  background: #eee;
+  padding-top: 96px;
+  padding-bottom: 40px;
   padding-left: 32px;
   padding-right: 64px;
+
+  background: #710b06;
 }
 
 .hero > div:nth-child(odd) {
-  padding-top: 110px;
+  padding-top: 96px;
   padding-bottom: 40px;
-  background: #ddd;
   padding-left: 64px;
+  background: linear-gradient(rgba(69, 69, 69, 0.3), rgba(69, 69, 69, 0.3)),
+    url("../imgs/hero.jpg");
+  background-color: #6107028e;
+  background-size: cover;
+  background-position: center; /* Center the image */
+  object-fit: cover;
+}
+.hero-side-link-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-side-link-container a {
+  font-family: "ProximaNova-Regular", sans-serif;
 }

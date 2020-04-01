@@ -192,12 +192,12 @@ a:visited {
 .main-nav ul.main-menu {
   z-index: 999;
   display: block;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  bottom: 0;
   left: 0;
   background: #ffffff;
   width: 50%;
-  height: 150%;
+  height: 100%;
   border-right: #ccc 1px solid;
   opacity: 1;
   padding: 30px;

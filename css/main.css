@@ -136,7 +136,7 @@ a:visited {
   width: 100%;
   max-width: 1440px;
   margin: auto;
-  padding: 24px 64px;
+  padding: 32px 64px;
 }
 .small {
   font-size: 14px;
@@ -364,9 +364,16 @@ ul {
   background: linear-gradient(rgba(21, 21, 21, 0.4), rgba(21, 21, 21, 0.4)),
     url("../imgs/box1.jpg");
 }
-
+.box1:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.831), rgba(21, 21, 21, 0.831)),
+    url("../imgs/box1.jpg");
+}
 .box2 {
   background: linear-gradient(rgba(21, 21, 21, 0.4), rgba(21, 21, 21, 0.4)),
+    url("../imgs/box2.jpg");
+}
+.box2:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.831), rgba(21, 21, 21, 0.831)),
     url("../imgs/box2.jpg");
 }
 
@@ -374,19 +381,35 @@ ul {
   background: linear-gradient(rgba(21, 21, 21, 0.4), rgba(21, 21, 21, 0.4)),
     url("../imgs/box3.jpg");
 }
+.box3:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.831), rgba(21, 21, 21, 0.831)),
+    url("../imgs/box3.jpg");
+}
 
 .box4 {
   background: linear-gradient(rgba(21, 21, 21, 0.4), rgba(21, 21, 21, 0.4)),
     url("../imgs/box4.jpg");
 }
+.box4:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.831), rgba(21, 21, 21, 0.831)),
+    url("../imgs/box4.jpg");
+}
 
+.box5 {
+  background: linear-gradient(rgba(21, 21, 21, 0.4), rgba(21, 21, 21, 0.4)),
+    url("../imgs/box5.jpg");
+}
+.box5:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.831), rgba(21, 21, 21, 0.831)),
+    url("../imgs/box5.jpg");
+}
 .box6 {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(21, 21, 21, 0.4)),
     url("../imgs/box6.jpg");
 }
 
 .box6:hover {
-  background: linear-gradient(rgba(28, 28, 28, 0.858), rgba(28, 28, 28, 0.858)),
+  background: linear-gradient(rgba(0, 0, 0, 0.831), rgba(21, 21, 21, 0.831)),
     url("../imgs/box6.jpg");
 }
 .box {
@@ -397,6 +420,7 @@ ul {
   object-fit: cover;
   flex-direction: column;
   cursor: pointer;
+  transition: transform 200ms ease;
 }
 .box:hover {
   color: #ffff;
@@ -405,6 +429,7 @@ ul {
   background-position: center; /* Center the image */
   object-fit: cover;
   flex-direction: column;
+  transform: scale(1.01);
 }
 
 .multi-link-in-box {
@@ -412,4 +437,9 @@ ul {
   margin-top: auto;
   flex-direction: row;
   justify-content: space-between;
+}
+
+footer {
+  background: #c17975;
+  color: white;
 }

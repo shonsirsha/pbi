@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "ProximaNova-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ProximaNova-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Proxima Nova Alt Bold";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Proxima Nova Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Circular Std Book";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Circular Std Book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Circular Std Book";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Circular Std Book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sabon LT Std - Roman";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/sabonltstd-roman.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Sabon LT Std - Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/sabonltstd-bold.otf") format("opentype");
+}

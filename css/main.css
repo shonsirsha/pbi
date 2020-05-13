@@ -4,7 +4,10 @@
   --light-color: white;
   --dark-color: black;
 
-  --mt-16: 16px;
+  --m-16: 16px;
+  --m-8: 8px;
+  --m-24: 24px;
+  --m-32: 32px;
 }
 
 * {
@@ -24,23 +27,23 @@ a:visited {
 }
 /*Utility Classes*/
 .mt-8 {
-  margin-top: 8px;
+  margin-top: var(--m-8);
 }
 
 .mt-16 {
-  margin-top: var(--mt-16);
+  margin-top: var(--m-16);
 }
 
 .mr-8 {
-  margin-right: 8px;
+  margin-right: var(--m-8);
 }
 
 .mt-24 {
-  margin-top: 24px;
+  margin-top: var(--m-24);
 }
 
 .mt-32 {
-  margin-top: 32px;
+  margin-top: var(--m-32);
 }
 
 .mt-40 {
@@ -399,10 +402,31 @@ footer {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /* @media only screen and (min-width: 600px) {} */
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 629px) {
   .box {
     grid-column: 1/4;
+  }
+
+  .box1 {
+    grid-row: 1;
+  }
+
+  .box-caption-text {
+    display: none;
+  }
+}
+@media only screen and (min-width: 630px) and (max-width: 991px) {
+  .box1,
+  .box2 {
+    grid-column: 1/4;
+  }
+
+  .box3 {
+    grid-column: 1/3;
+  }
+
+  .box6 {
+    grid-column: 2/4;
   }
 }
 
@@ -414,6 +438,10 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* .box {
+    grid-column: 1/4;
+  } */
 
   .hero > div:nth-child(even) {
     padding-top: 24px;

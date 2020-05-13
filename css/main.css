@@ -8,6 +8,8 @@
   --m-8: 8px;
   --m-24: 24px;
   --m-32: 32px;
+  --m-40: 40px;
+  --m-48: 48px;
 }
 
 * {
@@ -47,15 +49,15 @@ a:visited {
 }
 
 .mt-40 {
-  margin-top: 40px;
+  margin-top: var(--m-40);
 }
 
 .mt-48 {
-  margin-top: 48px;
+  margin-top: var(--m-48);
 }
 
 .mt-64 {
-  margin-top: 64px;
+  margin-top: var(--m-64);
 }
 
 .light {

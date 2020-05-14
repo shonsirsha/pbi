@@ -135,6 +135,9 @@ a:visited {
 #menu {
   cursor: pointer;
 }
+.menu-btn {
+  padding: 15px;
+}
 .main-nav {
   display: flex;
   align-items: center;

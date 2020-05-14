@@ -163,6 +163,7 @@ nav {
   justify-content: space-between;
   height: 80px;
   background: white;
+  padding: 32px 64px;
 }
 
 .main-nav .logo {
@@ -178,6 +179,7 @@ nav {
 }
 
 .main-nav ul li a {
+  font-size: 18px;
   padding-bottom: 2px;
 }
 

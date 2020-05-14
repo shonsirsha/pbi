@@ -20,13 +20,6 @@
 }
 
 @font-face {
-  font-family: "Circular Std Book";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Circular Std Book.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "Sabon LT Std - Roman";
   font-style: normal;
   font-weight: normal;

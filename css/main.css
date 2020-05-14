@@ -21,6 +21,7 @@ body {
   position: relative;
   margin-bottom: -200px;
   font-size: 16px;
+  font-family: "Circular Std Book", sans-serif;
 }
 a {
   text-decoration: none;
@@ -109,7 +110,7 @@ a:visited {
   font-size: 32px;
 }
 .hero-sub {
-  font-family: "Circular Std Book", sans-serif;
+  font-family: "ProximaNova-Regular", sans-serif;
   font-size: 16px;
 }
 
@@ -200,17 +201,18 @@ a:visited {
 }
 
 .main-nav ul.main-menu li {
-  padding: 10px;
+  padding: 20px 0px;
   border-bottom: #ccc solid 1px;
   font-size: 14px;
+  text-align: center;
 }
 
 .main-nav ul.main-menu li:last-child {
   border-bottom: 0;
 }
 
-.main-nav > div {
-  font-family: "ProximaNova-Regular", sans-serif;
+.main-menu a {
+  font-size: 16px;
 }
 
 a {
@@ -300,11 +302,9 @@ ul {
   width: 80%;
 }
 .box-header-text {
-  font-family: "Sabon LT Std - Roman";
   font-size: 32px;
 }
 .box-header-text-alternative {
-  font-family: "Sabon LT Std - Roman";
   font-size: 24px;
   width: 50%;
 }

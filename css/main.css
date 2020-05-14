@@ -423,8 +423,8 @@ footer {
   }
 }
 
-/*601px-630px*/
-@media only screen and (min-width: 601px) and (max-width: 630px) {
+/*601px until 768px*/
+@media only screen and (min-width: 601px) and (max-width: 768px) {
   .box1,
   .box2 {
     grid-column: 1/4;
@@ -443,6 +443,12 @@ footer {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .box-header-text,
+  .box-header-text-alternative {
+    font-size: 16px;
+    width: 100%;
   }
 }
 

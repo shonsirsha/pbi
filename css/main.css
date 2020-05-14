@@ -237,9 +237,9 @@ ul {
   margin-right: auto;
 }
 
-.brand > img {
+.brand img {
   width: 246px;
-  height: 46px;
+  height: 48px;
 }
 /*hero*/
 .hero {
@@ -420,6 +420,16 @@ footer {
 
   .box-caption-text {
     display: none;
+  }
+
+  .box-header-text,
+  .box-header-text-alternative {
+    font-size: 24px;
+    width: 100%;
+  }
+  .brand img {
+    width: 172px;
+    height: 34px;
   }
 }
 

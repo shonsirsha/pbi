@@ -9,7 +9,7 @@ $(document).ready(function () {
     $(".main-menu").toggleClass("show");
     setTimeout(() => {
       $(".main-menu").toggleClass("opacity1");
-    }, 500);
+    }, 300);
   }
 
   $(document).on("click", function (event) {

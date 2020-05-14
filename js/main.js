@@ -6,6 +6,7 @@ $(document).ready(function () {
 
   function toggleMenu() {
     menuOpened = !menuOpened;
+    $(".menu-overlay").toggleClass("show");
     $(".main-menu").toggleClass("show");
     setTimeout(() => {
       $(".main-menu").toggleClass("opacity1");

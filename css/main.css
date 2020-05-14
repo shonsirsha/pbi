@@ -113,6 +113,19 @@ a:visited {
   font-family: "ProximaNova-Regular", sans-serif;
 }
 
+.menu-overlay {
+  height: 100%;
+  z-index: 9;
+  display: none;
+  background: rgba(109, 109, 109, 0.379);
+  width: 100%;
+  position: absolute;
+}
+
+.menu-overlay.show {
+  display: block;
+}
+
 .container {
   width: 100%;
   max-width: 1440px;
@@ -133,6 +146,7 @@ a:visited {
 }
 /* Nav */
 nav {
+  z-index: 10;
   position: fixed;
   top: 0px;
   width: 100%;
@@ -177,7 +191,7 @@ nav {
 }
 
 .main-nav ul.main-menu {
-  z-index: 999;
+  z-index: 10;
   display: block;
   position: fixed;
   bottom: 0;

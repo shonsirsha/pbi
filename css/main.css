@@ -111,7 +111,6 @@ a:visited {
 }
 .hero-sub {
   font-family: "ProximaNova-Regular", sans-serif;
-  font-size: 16px;
 }
 
 .container {
@@ -149,7 +148,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  font-size: 13px;
   background: white;
 }
 
@@ -207,16 +205,11 @@ nav {
 .main-nav ul.main-menu li {
   padding: 20px 0px;
   border-bottom: #ccc solid 1px;
-  font-size: 14px;
   text-align: center;
 }
 
 .main-nav ul.main-menu li:last-child {
   border-bottom: 0;
-}
-
-.main-menu a {
-  font-size: 16px;
 }
 
 a {
@@ -315,7 +308,6 @@ ul {
 }
 .box-caption-text {
   font-family: "ProximaNova-Regular";
-  font-size: 16px;
 }
 
 .box-link {

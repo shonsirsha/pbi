@@ -144,7 +144,6 @@ a:visited {
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  padding: 24px 64px;
   font-size: 13px;
   background: white;
 }
@@ -409,12 +408,8 @@ footer {
   color: white;
 }
 
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {} */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {} */
-@media only screen and (max-width: 629px) {
+/*600px and smaller*/
+@media only screen and (max-width: 600px) {
   .box {
     grid-column: 1/4;
   }
@@ -427,7 +422,9 @@ footer {
     display: none;
   }
 }
-@media only screen and (min-width: 630px) and (max-width: 991px) {
+
+/*601px-630px*/
+@media only screen and (min-width: 601px) and (max-width: 630px) {
   .box1,
   .box2 {
     grid-column: 1/4;
@@ -440,9 +437,16 @@ footer {
   .box6 {
     grid-column: 2/4;
   }
+
+  .hero {
+    grid-template-columns: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-/*  tablets, and phones 768px and up */
+/*  991px and lower */
 @media only screen and (max-width: 991px) {
   .hero {
     grid-template-columns: 100%;
@@ -450,10 +454,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
-
-  /* .box {
-    grid-column: 1/4;
-  } */
 
   .hero > div:nth-child(even) {
     padding-top: 24px;

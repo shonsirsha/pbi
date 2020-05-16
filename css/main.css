@@ -433,7 +433,7 @@ ul {
 }
 
 footer {
-  background: #c17975;
+  background: var(--primary-color);
   color: white;
 }
 

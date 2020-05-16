@@ -10,6 +10,7 @@
   --m-32: 32px;
   --m-40: 40px;
   --m-48: 48px;
+  --m-64: 64px;
 }
 
 * {
@@ -483,6 +484,23 @@ footer {
   background: #ffffff;
   border-radius: 4px;
   box-shadow: 0 2px 10px -4px #373737;
+}
+
+/*footer*/
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: -32px;
+}
+
+.footer-wrapper div a {
+  /*icons*/
+  font-size: 21px;
+  color: white;
+  display: inline-block;
+  margin-right: 8px;
 }
 
 /*600px and smaller*/

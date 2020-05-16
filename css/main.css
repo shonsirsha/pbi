@@ -17,6 +17,9 @@
   margin: 0;
   padding: 0;
 }
+p {
+  line-height: 32px;
+}
 body {
   position: relative;
   margin-bottom: -200px;
@@ -71,6 +74,16 @@ a:visited {
 }
 
 /*General Styling*/
+.text-center {
+  text-align: center;
+}
+.divider {
+  width: 80px;
+  background: #616161;
+  min-height: 2px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .btn {
   padding: 8px 12px;
   border: none;
@@ -274,7 +287,7 @@ ul {
   background: var(--primary-color);
 }
 
-.hero > div:nth-child(odd) {
+.hero-pic {
   padding-top: 96px;
   padding-bottom: 40px;
   padding-left: 64px;
@@ -285,6 +298,7 @@ ul {
   background-position: center; /* Center the image */
   object-fit: cover;
 }
+
 .hero-side-link-container {
   display: flex;
   flex-direction: column;
@@ -422,6 +436,55 @@ footer {
   color: white;
 }
 
+/*about us*/
+
+.hero-about {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  height: 480px;
+}
+
+.hero-pic-about {
+  padding-top: 72px;
+
+  background: linear-gradient(rgba(19, 19, 19, 0.3), rgba(19, 19, 19, 0.3)),
+    url("../imgs/aboutus.jpg");
+  background-size: cover;
+  background-position: center bottom; /* Center the image */
+  object-fit: cover;
+}
+
+.overlap-container {
+  max-width: 1040px;
+  margin: auto;
+  margin-top: -64px;
+  background: #ffffff;
+  z-index: 9;
+  position: relative;
+  border-radius: 4px;
+  padding: 32px;
+  box-shadow: 0 2px 10px -4px #373737;
+}
+
+.aboutus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+  grid-auto-rows: minmax(90px, auto);
+}
+
+.aboutus-grid .card {
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px -4px #373737;
+}
+
 /*600px and smaller*/
 @media only screen and (max-width: 600px) {
   .box {
@@ -483,6 +546,13 @@ footer {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .aboutus-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 32px;
+    grid-auto-rows: minmax(90px, auto);
   }
 
   .hero > div:nth-child(even) {

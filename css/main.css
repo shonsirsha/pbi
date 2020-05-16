@@ -97,6 +97,10 @@ a:visited {
   transition: opacity 400ms ease;
 }
 
+.btn-pill {
+  border-radius: 32px;
+}
+
 .btn-primary {
   background: var(--primary-color);
 }

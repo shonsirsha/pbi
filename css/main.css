@@ -85,6 +85,7 @@ a:visited {
   margin-left: auto;
   margin-right: auto;
 }
+
 .btn {
   padding: 8px 12px;
   border: none;
@@ -127,7 +128,8 @@ a:visited {
   font-family: "ProximaNova-Regular", sans-serif;
   font-size: 32px;
 }
-.hero-sub {
+.lead {
+  font-size: 21px;
   font-family: "ProximaNova-Regular", sans-serif;
 }
 
@@ -296,6 +298,7 @@ ul {
   padding-top: 96px;
   padding-bottom: 40px;
   padding-left: 64px;
+  padding-right: 64px;
   background: linear-gradient(rgba(69, 69, 69, 0.3), rgba(69, 69, 69, 0.3)),
     url("../imgs/hero.jpg");
   background-color: #6107028e;
@@ -451,12 +454,11 @@ footer {
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;
-  height: 480px;
 }
 
 .hero-pic-about {
-  padding-top: 72px;
-
+  padding-top: 96px;
+  padding-bottom: 80px;
   background: linear-gradient(rgba(19, 19, 19, 0.3), rgba(19, 19, 19, 0.3)),
     url("../imgs/aboutus.jpg");
   background-size: cover;
@@ -488,6 +490,28 @@ footer {
   background: #ffffff;
   border-radius: 4px;
   box-shadow: 0 2px 10px -4px #373737;
+}
+
+/*courses and fees*/
+
+.hero-courses-fees {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
+
+.hero-pic-courses {
+  padding-top: 96px;
+  padding-bottom: 80px;
+  background: linear-gradient(rgba(19, 19, 19, 0.3), rgba(19, 19, 19, 0.3)),
+    url("../imgs/classroom.jpg");
+  background-size: cover;
+  background-position: center center; /* Center the image */
+  object-fit: cover;
 }
 
 /*footer*/

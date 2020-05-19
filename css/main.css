@@ -342,6 +342,16 @@ ul {
   padding-top: 80px;
 }
 
+.hero-100percent {
+  display: grid;
+  grid-template-columns: 100%;
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+}
+
 .hero > div:nth-child(even) {
   padding-top: 96px;
   padding-bottom: 40px;
@@ -497,20 +507,9 @@ ul {
 
 footer {
   background: var(--primary-color);
-  color: white;
 }
 
 /*about us*/
-
-.hero-about {
-  display: grid;
-  grid-template-columns: 100%;
-  width: 100%;
-
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: auto;
-}
 
 .hero-pic-about {
   padding-top: 96px;
@@ -536,6 +535,34 @@ footer {
 
 /*courses and fees*/
 
+.hero-pic-courses {
+  padding-top: 96px;
+  padding-bottom: 80px;
+  background: linear-gradient(rgba(19, 19, 19, 0.3), rgba(19, 19, 19, 0.3)),
+    url("../imgs/classroom.jpg");
+  background-size: cover;
+  background-position: center center; /* Center the image */
+  object-fit: cover;
+}
+
+.card-courses-1 {
+  background: linear-gradient(rgba(21, 21, 21, 0.4), rgba(21, 21, 21, 0.4)),
+    url("../imgs/disscuss.jpg");
+  background-size: cover;
+  background-position: center center; /* Center the image */
+  object-fit: cover;
+}
+
+.card-courses-2 {
+  background: linear-gradient(rgba(21, 21, 21, 0.4), rgba(21, 21, 21, 0.4)),
+    url("../imgs/teacher.jpg");
+  background-size: cover;
+  background-position: center center; /* Center the image */
+  object-fit: cover;
+}
+
+/*courses and fees*/
+
 .hero-courses-fees {
   display: grid;
   grid-template-columns: 100%;
@@ -546,13 +573,13 @@ footer {
   margin-top: auto;
 }
 
-.hero-pic-courses {
+.hero-pic-activities {
   padding-top: 96px;
   padding-bottom: 80px;
   background: linear-gradient(rgba(19, 19, 19, 0.3), rgba(19, 19, 19, 0.3)),
-    url("../imgs/classroom.jpg");
+    url("../imgs/box3.jpg");
   background-size: cover;
-  background-position: center center; /* Center the image */
+  background-position: center top; /* Center the image */
   object-fit: cover;
 }
 
@@ -581,10 +608,13 @@ footer {
   margin-right: -32px;
 }
 
-.footer-wrapper div a {
+.footer-wrapper * {
+  color: white;
+}
+.footer-wrapper div .fab,
+.fas {
   /*icons*/
   font-size: 21px;
-  color: white;
   display: inline-block;
   margin-right: 8px;
 }

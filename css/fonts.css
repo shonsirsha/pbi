@@ -20,6 +20,13 @@
 }
 
 @font-face {
+  font-family: "Circular Std Black";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Circular Std Black.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Sabon LT Std - Roman";
   font-style: normal;
   font-weight: normal;

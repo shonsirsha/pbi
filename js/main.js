@@ -15,8 +15,10 @@ $(document).ready(function () {
 
   $(document).on("click", function (event) {
     if (!$(event.target).closest(".menu-btn").length) {
-      if (menuOpened) {
-        toggleMenu();
+      if (!$(event.target).closest(".main-menu").length) {
+        if (menuOpened) {
+          toggleMenu();
+        }
       }
     }
   });

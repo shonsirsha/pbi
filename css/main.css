@@ -262,7 +262,7 @@ th {
 .img-thumbnail {
   border-radius: 4px;
   width: 316px;
-  height: 160px;
+  height: 216px;
 }
 
 .bg-gray {
@@ -634,6 +634,16 @@ footer {
   object-fit: cover;
 }
 
+/*accommodations*/
+.hero-pic-yogyakarta {
+  padding-top: 96px;
+  padding-bottom: 80px;
+  background: linear-gradient(rgba(19, 19, 19, 0.3), rgba(19, 19, 19, 0.3)),
+    url("../imgs/yogyakarta.jpg");
+  background-size: cover;
+  background-position: center center; /* Center the image */
+  object-fit: cover;
+}
 /*footer*/
 .footer-wrapper {
   display: flex;

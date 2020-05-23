@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Puri Bahasa Indonesia</title>
+    <script
+      src="https://kit.fontawesome.com/f9b96a55d5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/fonts.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="main-nav">
+        <div class="flex-horizontal">
+          <div class="brand">
+            <a href="./index.html"><img src="imgs/logo.png" /></a>
+          </div>
+        </div>
+
+        <ul class="main-menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="./courses.html">Courses and Fees</a></li>
+          <li><a href="./activities.html">Activities</a></li>
+          <li><a href="./accommodations.html">Accommmodations</a></li>
+          <li><a href="#">Yogyakarta</a></li>
+        </ul>
+
+        <div id="menu" class="menu-btn flex-horizontal">
+          <i class="fas fa-bars mr-8"></i>
+
+          <p class="small">Menu</p>
+        </div>
+      </div>
+    </nav>
+    <div class="menu-overlay"></div>
+    <div class="hero hero-100percent">
+      <div class="hero-pic hero-pic-yogyakarta">
+        <h1 class="h1-style light">Yogyakarta</h1>
+
+        <p class="lead mt-16 light">
+          Explore the city of Yogyakarta
+        </p>
+      </div>
+    </div>
+    <section id="all-courses">
+      <div class="container">
+        <div class="card">
+          <h2 class="h2-style text-center">Yogyakarta</h2>
+          <div class="divider mt-16"></div>
+          <p class="mt-32">
+            <b>Lorem ipsum dolor</b>, sit amet consectetur adipisicing elit.
+            Culpa tenetur magni quod id, iure maxime accusantium voluptatem,
+            reprehenderit, placeat nesciunt eveniet earum quidem expedita et!
+            Voluptatum fuga maxime hic exercitationem cupiditate eaque, pariatur
+            accusantium molestiae quibusdam facilis ipsam at minima.
+          </p>
+          <p class="mt-16">
+            <b>Lorem ipsum dolor</b>, sit amet consectetur adipisicing elit.
+            Culpa tenetur magni quod id. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aperiam omnis cumque, harum doloremque atque
+            laborum sint iusto autem accusantium sit illum?
+          </p>
+          <div class="grid-3 mt-64">
+            <a
+              href="./imgs/yogyakarta.jpg"
+              data-lightbox="image-1"
+              data-title="My caption"
+            >
+              <img src="./imgs/yogyakarta.jpg" class="img-thumbnail" />
+            </a>
+            <a
+              href="./imgs/yogyakarta.jpg"
+              data-lightbox="image-1"
+              data-title="My caption"
+            >
+              <img src="./imgs/yogyakarta.jpg" class="img-thumbnail" />
+            </a>
+            <a
+              href="./imgs/yogyakarta.jpg"
+              data-lightbox="image-1"
+              data-title="My caption"
+            >
+              <img src="./imgs/yogyakarta.jpg" class="img-thumbnail" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div>
+            <p>&copy; Puri Bahasa Indonesia 2020</p>
+          </div>
+          <div>
+            <a
+              href="https://instagram.com/puri_bahasa_indonesia"
+              target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/puribahasaindonesia"
+              target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      $(document).on("click", '[data-toggle="lightbox"]', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+      });
+    </script>
+  </body>
+</html>

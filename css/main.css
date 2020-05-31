@@ -634,7 +634,7 @@ footer {
   object-fit: cover;
 }
 
-/*accommodations*/
+/*yogyakarta*/
 .hero-pic-yogyakarta {
   padding-top: 96px;
   padding-bottom: 80px;
@@ -644,6 +644,46 @@ footer {
   background-position: center center; /* Center the image */
   object-fit: cover;
 }
+
+/*reviews*/
+.hero-pic-reviews {
+  padding-top: 96px;
+  padding-bottom: 80px;
+  background: linear-gradient(rgba(19, 19, 19, 0.3), rgba(19, 19, 19, 0.3)),
+    url("../imgs/reviews.jpg");
+  background-size: cover;
+  background-position: center center; /* Center the image */
+  object-fit: cover;
+}
+
+.for-slick {
+  max-width: 100%;
+  margin: auto;
+}
+
+.testimonial-item {
+  margin-top: var(--m-16);
+  background: #fafafa;
+  padding: 24px 48px;
+  border-radius: 8px;
+  margin-left: 8px;
+  box-shadow: 1px 1px 5px -3px #000;
+}
+.slick-slide {
+  margin-left: var(--m-16);
+  margin-right: var(--m-16);
+}
+
+.slick-list {
+  margin-left: -var(--m-16);
+  margin-right: -var(--m-16);
+  pointer-events: none;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: var(--primary-color);
+}
+
 /*footer*/
 .footer-wrapper {
   display: flex;

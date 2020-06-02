@@ -3,9 +3,13 @@
   --primary-color: #a62331;
   --light-color: white;
   --dark-color: #333;
+  --burgundy: #6107028e;
+  --light-gray: #fafafa;
   --gray: rgb(250, 250, 250);
+  --gray-1: #ccc;
   --gray-2: #757575;
-  --gray-3: #373737;
+  --gray-3: #616161;
+  --gray-4: #373737;
   --dark-gray: #262626;
   --m-8: 8px;
   --m-16: 16px;
@@ -103,7 +107,7 @@ th {
 }
 .divider {
   width: 80px;
-  background: #616161;
+  background: var(--gray-3);
   min-height: 2px;
   margin-left: auto;
   margin-right: auto;
@@ -161,15 +165,15 @@ th {
 }
 .card {
   padding: 32px;
-  background: #ffffff;
+  background: var(--light-color);
   border-radius: 4px;
-  box-shadow: 0 2px 10px -4px var(--gray-3);
+  box-shadow: 0 2px 10px -4px var(--gray-4);
 }
 .card-ribbon {
   padding: 16px;
-  background: #ffffff;
+  background: var(--light-color);
   border-radius: 4px;
-  box-shadow: 0 2px 10px -4px var(--gray-3);
+  box-shadow: 0 2px 10px -4px var(--gray-4);
   display: flex;
   flex-direction: row;
   position: relative;
@@ -286,7 +290,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  background: white;
+  background: var(--light-color);
   padding: 32px 64px;
 }
 
@@ -322,10 +326,10 @@ nav {
   position: fixed;
   bottom: 0;
   left: 0;
-  background: #ffffff;
+  background: var(--light-color);
   width: 50%;
   height: 100%;
-  border-right: #ccc 1px solid;
+  border-right: var(--gray-1) 1px solid;
   opacity: 0;
   transition-property: opacity;
   padding: 30px;
@@ -344,7 +348,7 @@ nav {
 
 .main-nav ul.main-menu li {
   padding: 20px 0px;
-  border-bottom: #ccc solid 1px;
+  border-bottom: var(--gray-1) solid 1px;
   text-align: center;
 }
 
@@ -406,7 +410,7 @@ ul {
   padding-right: 64px;
   background: linear-gradient(rgba(69, 69, 69, 0.3), rgba(69, 69, 69, 0.3)),
     url("../imgs/hero.jpg");
-  background-color: #6107028e;
+  background-color: var(--burgundy);
   background-size: cover;
   background-position: center; /* Center the image */
   object-fit: cover;
@@ -455,7 +459,7 @@ ul {
 
 .box-link {
   font-family: "Proxima Nova Alt Bold";
-  color: #ffff;
+  color: var(--light-color);
   font-size: 18px;
   margin-top: auto;
 }
@@ -518,7 +522,7 @@ ul {
     url("../imgs/box6.jpg");
 }
 .box {
-  color: #ffff;
+  color: var(--light-color);
   display: flex;
   background-size: cover;
   background-position: center; /* Center the image */
@@ -528,7 +532,7 @@ ul {
   transition: transform 200ms ease;
 }
 .box:hover {
-  color: #ffff;
+  color: var(--light-color);
   display: flex;
   background-size: cover;
   background-position: center; /* Center the image */
@@ -564,12 +568,12 @@ footer {
   max-width: 1040px;
   margin: auto;
   margin-top: -64px;
-  background: #ffffff;
+  background: var(--light-color);
   z-index: 9;
   position: relative;
   border-radius: 4px;
   padding: 32px;
-  box-shadow: 0 2px 10px -4px var(--gray-3);
+  box-shadow: 0 2px 10px -4px var(--gray-4);
 }
 
 /*courses and fees*/
@@ -653,11 +657,11 @@ footer {
 
 .testimonial-item {
   margin-top: var(--m-16);
-  background: #fafafa;
+  background: var(--light-gray);
   padding: 24px 48px;
   border-radius: 8px;
   margin-left: 8px;
-  box-shadow: 1px 1px 5px -3px #000;
+  box-shadow: 1px 1px 5px -3px var(--dark-color);
 }
 .slick-slide {
   margin-left: var(--m-16);
@@ -754,7 +758,7 @@ footer {
     padding: 16px;
     background: var(--light-color);
     border-radius: 4px;
-    box-shadow: 0 2px 10px -4px var(--gray-3);
+    box-shadow: 0 2px 10px -4px var(--gray-4);
     display: flex;
     flex-direction: column;
     position: relative;

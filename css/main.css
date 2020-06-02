@@ -2,7 +2,7 @@
 :root {
   --primary-color: #a62331;
   --light-color: white;
-  --dark-color: black;
+  --dark-color: #333;
 
   --m-16: 16px;
   --m-8: 8px;
@@ -43,7 +43,7 @@ table {
 td,
 th {
   padding: 8px;
-  border: 1px solid #000000;
+  border: 1px solid var(--dark-color);
   border-spacing: 0px;
   max-width: 0px;
 }
@@ -89,10 +89,6 @@ th {
   color: var(--light-color);
 }
 
-.dark {
-  color: var(--dark-color);
-}
-
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -128,7 +124,7 @@ th {
 
 .btn-primary {
   background: var(--primary-color);
-  color: #ffffff;
+  color: var(--light-color);
 }
 
 .btn-hero {
@@ -363,12 +359,12 @@ ul {
 }
 
 .dark {
-  color: #333;
+  color: var(--dark-color);
 }
 
 .dark .btn {
   background: #f4f4f4;
-  color: #333;
+  color: var(--dark-color);
 }
 
 .brand {

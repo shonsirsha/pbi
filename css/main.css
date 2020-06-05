@@ -426,7 +426,7 @@ ul {
 
 .hero-side-link-container .fas {
   font-size: 21px;
-  margin-right: 4px;
+  margin-right: 8px;
 }
 
 /*grid tiles*/
@@ -714,7 +714,7 @@ footer {
   }
 }
 
-/*768px until 601px*/
+/*styles applied to ONLY 768px until 601px*/
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .box1,
   .box2 {
@@ -743,7 +743,7 @@ footer {
   }
 }
 
-/*768px and lower*/
+/*styles applied 768px and lower*/
 @media only screen and (max-width: 768px) {
   .card-ribbon {
     padding: 16px;
@@ -770,7 +770,17 @@ footer {
     height: 100%;
   }
 }
+@media only screen and (max-width: 991px) and (min-width: 769px) {
+  .hero-side-link-container {
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+  }
 
+  .hero-side-link-container a {
+    margin-right: var(--m-32);
+  }
+}
 /*  991px and lower */
 @media only screen and (max-width: 991px) {
   .hero {
@@ -797,15 +807,5 @@ footer {
 
   .container {
     padding: 32px 32px;
-  }
-
-  .hero-side-link-container {
-    flex-direction: row;
-    margin: auto;
-    justify-content: center;
-  }
-
-  .hero-side-link-container a {
-    margin-right: var(--m-32);
   }
 }

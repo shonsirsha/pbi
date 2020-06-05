@@ -714,7 +714,7 @@ footer {
   }
 }
 
-/*styles applied ONLY to 768px - 601px*/
+/*styles applied ONLY to width 768px - 601px*/
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .box1,
   .box2 {
@@ -743,7 +743,7 @@ footer {
   }
 }
 
-/*styles applied 768px and lower*/
+/*styles applied to width 768px and lower*/
 @media only screen and (max-width: 768px) {
   .card-ribbon {
     padding: 16px;
@@ -770,7 +770,7 @@ footer {
     height: 100%;
   }
 }
-/*styles applied ONLY to 991px-769px*/
+/*styles applied ONLY to width 991px-769px*/
 @media only screen and (max-width: 991px) and (min-width: 769px) {
   .hero-side-link-container {
     flex-direction: row;
@@ -782,7 +782,7 @@ footer {
     margin-right: var(--m-32);
   }
 }
-/*  991px and lower */
+/*  styles applied to width 991px and lower */
 @media only screen and (max-width: 991px) {
   .hero {
     grid-template-columns: 100%;

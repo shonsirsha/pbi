@@ -289,7 +289,6 @@ nav {
   justify-content: space-between;
   height: 80px;
   background: var(--light-color);
-  padding: 32px 64px;
 }
 
 .main-nav .logo {
@@ -803,10 +802,6 @@ footer {
   }
 
   .container {
-    padding: 32px 32px;
-  }
-
-  .main-nav {
     padding: 32px 32px;
   }
 }

@@ -420,7 +420,13 @@ ul {
 
 .hero-side-link-container a {
   margin-top: var(--m-16);
+  display: flex;
   font-family: "ProximaNova-Regular", sans-serif;
+}
+
+.hero-side-link-container .fas {
+  font-size: 21px;
+  margin-right: 4px;
 }
 
 /*grid tiles*/
@@ -676,7 +682,7 @@ footer {
   color: var(--light-color);
 }
 .footer-wrapper div .fab,
-.fas {
+.footer-wrapper div .fas {
   /*icons*/
   font-size: 21px;
   display: inline-block;
@@ -791,5 +797,15 @@ footer {
 
   .container {
     padding: 32px 32px;
+  }
+
+  .hero-side-link-container {
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .hero-side-link-container a {
+    margin-right: var(--m-32);
   }
 }

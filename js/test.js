@@ -11,24 +11,26 @@ let jsonForm = [
     },
   },
 ];
-
+var wrapper = document.getElementById("wrapper");
 jsonForm.forEach((menuSection, i) => {
-  console.log("<section class='" + i + "'>" + menuSection.sectionName + "");
+  wrapper.innerHTML += "<section class='" + i + "'>" + menuSection.sectionName;
   for (var inputName in menuSection.content) {
     if (menuSection.content.hasOwnProperty(inputName)) {
       if (Array.isArray(menuSection.content[inputName])) {
-        console.log("<option>");
+        wrapper.innerHTML += "<select id='" + inputName + "'>";
+        let inputSelect = document.getElementById(inputName);
         menuSection.content[inputName].forEach((x) => {
-          console.log("<section>" + x + "</section>");
+          inputSelect.innerHTML += "<option>" + x + "</option>";
         });
-        console.log("</option>");
       } else {
-        console.log(
-          inputName + " input of this: " + menuSection.content[inputName]
-        );
+        wrapper.innerHTML +=
+          "<input type='" +
+          menuSection.content[inputName] +
+          "' placeholder='" +
+          inputName +
+          "'/>";
       }
     }
   }
-  console.log("</section>");
-  console.log("----------------------");
+  wrapper.innerHTML += "</section>";
 });

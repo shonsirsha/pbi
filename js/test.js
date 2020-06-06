@@ -16,8 +16,16 @@ const createForms = (json) => {
   let wrapper = document.getElementById("wrapper");
   let currentPage = 1;
   json.forEach((menuSection, i) => {
-    wrapper.innerHTML +=
-      "<section id='multiStep" + i + "'>" + menuSection.sectionName;
+    if (i === currentPage - 1) {
+      wrapper.innerHTML +=
+        "<section id='multiStep" + i + "'>" + menuSection.sectionName;
+    } else {
+      wrapper.innerHTML +=
+        "<section class='hidden' id='multiStep" +
+        i +
+        "'>" +
+        menuSection.sectionName;
+    }
 
     for (var inputName in menuSection.content) {
       // loops through the 'content' obj

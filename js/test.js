@@ -11,26 +11,43 @@ let jsonForm = [
     },
   },
 ];
-var wrapper = document.getElementById("wrapper");
-jsonForm.forEach((menuSection, i) => {
-  wrapper.innerHTML += "<section class='" + i + "'>" + menuSection.sectionName;
-  for (var inputName in menuSection.content) {
-    if (menuSection.content.hasOwnProperty(inputName)) {
-      if (Array.isArray(menuSection.content[inputName])) {
-        wrapper.innerHTML += "<select id='" + inputName + "'>";
-        let inputSelect = document.getElementById(inputName);
-        menuSection.content[inputName].forEach((x) => {
-          inputSelect.innerHTML += "<option>" + x + "</option>";
-        });
-      } else {
-        wrapper.innerHTML +=
-          "<input type='" +
-          menuSection.content[inputName] +
-          "' placeholder='" +
-          inputName +
-          "'/>";
+
+const createForms = (json) => {
+  let wrapper = document.getElementById("wrapper");
+  let currentPage = 1;
+  json.forEach((menuSection, i) => {
+    wrapper.innerHTML +=
+      "<section id='multiStep" + i + "'>" + menuSection.sectionName;
+
+    for (var inputName in menuSection.content) {
+      // loops through the 'content' obj
+
+      if (menuSection.content.hasOwnProperty(inputName)) {
+        let pageSection = document.getElementById("multiStep" + i);
+
+        if (Array.isArray(menuSection.content[inputName])) {
+          pageSection.innerHTML += "<select id='" + inputName + "'>";
+          let inputSelect = document.getElementById(inputName);
+          // if the 'content' value for this particular key is an array, then create a select input with a unique id.
+
+          menuSection.content[inputName].forEach((x) => {
+            inputSelect.innerHTML += "<option>" + x + "</option>";
+          });
+          //populate options (which are the content of the array) inside the select input created above.
+        } else {
+          // if it's not an array, then it's gonna be a normal input (text/email/phone nr,etc for now) -- no check for radios yet.
+          pageSection.innerHTML +=
+            "<input type='" +
+            menuSection.content[inputName] +
+            "' name='" +
+            inputName +
+            "' placeholder='" +
+            inputName +
+            "'/>";
+        }
       }
     }
-  }
-  wrapper.innerHTML += "</section>";
-});
+  });
+};
+
+createForms(jsonForm);

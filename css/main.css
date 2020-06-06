@@ -101,7 +101,9 @@ th {
 }
 
 /*General Styling*/
-
+.hidden {
+  display: none;
+}
 .text-center {
   text-align: center;
 }

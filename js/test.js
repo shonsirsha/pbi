@@ -11,22 +11,77 @@ let jsonForm = [
     },
   },
 ];
-
-const createForms = (json) => {
+const showCurrentPage = (renderedPageIndex, currentPage, sectionName) => {
   let wrapper = document.getElementById("wrapper");
+
+  //shows current page/section and hides the other
+  if (renderedPageIndex === currentPage) {
+    wrapper.innerHTML +=
+      "<section id='multiStep" + renderedPageIndex + "'>" + sectionName;
+  } else {
+    wrapper.innerHTML +=
+      "<section class='hidden' id='multiStep" +
+      renderedPageIndex +
+      "'>" +
+      sectionName;
+  }
+};
+const btnShower = (page, lastPage) => {
+  let prevBtn = document.getElementById("prevBtn");
+  let nextBtn = document.getElementById("nextBtn");
+
+  if (page === 0) {
+    // first page
+    prevBtn.className = "hidden";
+    nextBtn.className = "shown";
+    nextBtn.innerHTML = "next";
+  }
+  if (page >= 1 && page < lastPage - 1) {
+    prevBtn.className = "shown";
+    nextBtn.className = "shown";
+  }
+
+  if (page === lastPage - 1) {
+    prevBtn.className = "shown";
+    nextBtn.className = "shown";
+    nextBtn.innerHTML = "send";
+  }
+};
+const createForms = (json) => {
+  let prevBtn = document.getElementById("prevBtn");
+  let nextBtn = document.getElementById("nextBtn");
   let currentPage = 0;
-  json.forEach((menuSection, i) => {
-    if (i === currentPage) {
-      wrapper.innerHTML +=
-        "<section id='multiStep" + i + "'>" + menuSection.sectionName;
-    } else {
-      wrapper.innerHTML +=
-        "<section class='hidden' id='multiStep" +
-        i +
-        "'>" +
-        menuSection.sectionName;
+  let lastPage = json.length;
+  btnShower(currentPage, lastPage);
+
+  nextBtn.addEventListener("click", () => {
+    if (currentPage === lastPage - 1) {
+      // send
+      alert("send");
     }
-    //hiding all other section/page except if it's current page.
+    currentPage++;
+    let nextPageSection = document.getElementById("multiStep" + currentPage);
+    let currentPageSection = document.getElementById(
+      "multiStep" + (currentPage - 1)
+    );
+    currentPageSection.className = "hidden";
+    nextPageSection.className = "shown";
+    btnShower(currentPage, lastPage);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentPage--;
+    let prevPageSection = document.getElementById("multiStep" + currentPage);
+    let currentPageSection = document.getElementById(
+      "multiStep" + (currentPage + 1)
+    );
+    currentPageSection.className = "hidden";
+    prevPageSection.className = "shown";
+    btnShower(currentPage, lastPage);
+  });
+
+  json.forEach((menuSection, i) => {
+    showCurrentPage(i, currentPage, menuSection.sectionName);
 
     for (var inputName in menuSection.content) {
       // loops through the 'content' obj

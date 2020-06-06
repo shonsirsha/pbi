@@ -14,9 +14,9 @@ let jsonForm = [
 
 const createForms = (json) => {
   let wrapper = document.getElementById("wrapper");
-  let currentPage = 1;
+  let currentPage = 0;
   json.forEach((menuSection, i) => {
-    if (i === currentPage - 1) {
+    if (i === currentPage) {
       wrapper.innerHTML +=
         "<section id='multiStep" + i + "'>" + menuSection.sectionName;
     } else {
@@ -26,6 +26,7 @@ const createForms = (json) => {
         "'>" +
         menuSection.sectionName;
     }
+    //hiding all other section/page except if it's current page.
 
     for (var inputName in menuSection.content) {
       // loops through the 'content' obj

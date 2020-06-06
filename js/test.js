@@ -1,4 +1,4 @@
-let jsonMenu = [
+let jsonForm = [
   {
     sectionName: "Personal Details",
     content: { fullName: "text", nationality: "text", sex: ["female", "male"] },
@@ -12,7 +12,7 @@ let jsonMenu = [
   },
 ];
 
-jsonMenu.forEach((menuSection, i) => {
+jsonForm.forEach((menuSection, i) => {
   console.log("<section class='" + i + "'>" + menuSection.sectionName + "");
   for (var inputName in menuSection.content) {
     if (menuSection.content.hasOwnProperty(inputName)) {

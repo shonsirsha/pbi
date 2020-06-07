@@ -274,7 +274,12 @@ th {
 .bg-gray {
   background: var(--gray);
 }
-
+.form-input {
+  background: #f4f4f4;
+  border: none;
+  height: 88px;
+  border-radius: 8px;
+}
 /* Nav */
 nav {
   z-index: 13;

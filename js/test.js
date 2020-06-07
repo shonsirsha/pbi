@@ -17,10 +17,13 @@ const showCurrentPage = (renderedPageIndex, currentPage, sectionName) => {
   //shows current page/section and hides the other
   if (renderedPageIndex === currentPage) {
     wrapper.innerHTML +=
-      "<section id='multiStep" + renderedPageIndex + "'>" + sectionName;
+      "<section class='grid-2' id='multiStep" +
+      renderedPageIndex +
+      "'>" +
+      sectionName;
   } else {
     wrapper.innerHTML +=
-      "<section class='hidden' id='multiStep" +
+      "<section class='grid-2' class='hidden' id='multiStep" +
       renderedPageIndex +
       "'>" +
       sectionName;
@@ -101,7 +104,7 @@ const createForms = (json) => {
         } else {
           // if it's not an array, then it's gonna be a normal input (text/email/phone nr,etc for now) -- no check for radios yet.
           pageSection.innerHTML +=
-            "<input type='" +
+            "<input class='form-input' type='" +
             menuSection.content[inputName] +
             "' name='" +
             inputName +

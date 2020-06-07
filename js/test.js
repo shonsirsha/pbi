@@ -17,16 +17,12 @@ const showCurrentPage = (renderedPageIndex, currentPage, sectionName) => {
   //shows current page/section and hides the other
   if (renderedPageIndex === currentPage) {
     wrapper.innerHTML +=
-      "<section class='grid-2' id='multiStep" +
-      renderedPageIndex +
-      "'>" +
-      sectionName;
+      "<section class='grid-2' id='multiStep" + renderedPageIndex + "'>";
   } else {
     wrapper.innerHTML +=
       "<section class='grid-2' class='hidden' id='multiStep" +
       renderedPageIndex +
-      "'>" +
-      sectionName;
+      "'>";
   }
 };
 const btnShower = (page, lastPage) => {

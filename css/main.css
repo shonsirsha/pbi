@@ -812,7 +812,7 @@ footer {
   .grid-2 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 32px;
+    grid-gap: 16px;
   }
 
   .hero > div:nth-child(even) {

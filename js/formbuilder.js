@@ -28,6 +28,7 @@ let jsonForm = [
     },
   },
 ];
+let currentPage = 0;
 
 const hideComponent = (component) => {
   component.removeClass("shown");
@@ -45,11 +46,15 @@ const showCurrentPage = (renderedPageIndex, currentPage) => {
   //shows current page/section and hides the other
   if (renderedPageIndex === currentPage) {
     wrapper.append(
-      "<section class='grid-2' id='multiStep" + renderedPageIndex + "'>"
+      "<section class='grid-2 multiStep' id='multiStep" +
+        renderedPageIndex +
+        "'>"
     );
   } else {
     wrapper.append(
-      "<section class='grid-2 hidden' id='multiStep" + renderedPageIndex + "'>"
+      "<section class='grid-2 hidden multiStep' id='multiStep" +
+        renderedPageIndex +
+        "'>"
     );
   }
 };
@@ -78,7 +83,6 @@ const btnShower = (page, lastPage) => {
   );
 };
 const createForms = (json) => {
-  let currentPage = 0;
   let lastPage = json.length;
   btnShower(currentPage, lastPage);
 
@@ -93,6 +97,7 @@ const createForms = (json) => {
       showComponent(nextPageSection);
       btnShower(currentPage, lastPage);
     }
+    // alert(currentPage);
   });
 
   $("#prevBtn").on("click", () => {
@@ -102,11 +107,21 @@ const createForms = (json) => {
     hideComponent(currentPageSection);
     showComponent(prevPageSection);
     btnShower(currentPage, lastPage);
+    // alert(currentPage);
   });
-
   json.forEach((menuSection, i) => {
     showCurrentPage(i, currentPage);
-
+    $("#allSectionNames").append(
+      "<p myid='" +
+        i +
+        "' id='sectionNumber" +
+        i +
+        "' class='goToSection'>" +
+        (i + 1) +
+        ". " +
+        menuSection.sectionName +
+        "</p> <br/>"
+    );
     for (var inputName in menuSection.content) {
       // loops through the 'content' obj
 
@@ -144,3 +159,15 @@ const createForms = (json) => {
 };
 
 createForms(jsonForm);
+
+$(".goToSection").click(function () {
+  hideComponent($(".multiStep"));
+  showComponent($("#multiStep" + $(this).attr("myid")));
+  let myIdInt = parseInt($(this).attr("myid"));
+  currentPage = myIdInt;
+  $("#sectionTitle").html(
+    "<h3>" + (myIdInt + 1) + ". " + jsonForm[myIdInt].sectionName + "</h3>"
+  );
+  btnShower(currentPage, jsonForm.length);
+  // showComponent($("#" + ));
+});

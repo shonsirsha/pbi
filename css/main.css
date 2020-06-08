@@ -125,6 +125,7 @@ th {
   border: 1px solid #888;
   width: 80%;
 }
+
 .close {
   color: #aaaaaa;
   float: right;
@@ -132,9 +133,15 @@ th {
   font-weight: bold;
   cursor: pointer;
 }
-.showAllSections {
+.showAllSections,
+.goToSection {
   cursor: pointer;
+  display: inline-block;
 }
+.goToSection:hover {
+  text-decoration: underline;
+}
+
 .hidden {
   display: none !important;
 }

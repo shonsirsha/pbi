@@ -52,4 +52,7 @@ $(document).ready(function () {
   $(".close").on("click", () => {
     $(".modal").fadeOut();
   });
+  $(".goToSection").on("click", () => {
+    $(".modal").fadeOut();
+  });
 });

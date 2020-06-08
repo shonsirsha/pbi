@@ -12,6 +12,16 @@ let jsonForm = [
   },
 ];
 
+const hideComponent = (component) => {
+  component.removeClass("shown");
+  component.addClass("hidden");
+};
+
+const showComponent = (component) => {
+  component.removeClass("hidden");
+  component.addClass("shown");
+};
+
 const showCurrentPage = (renderedPageIndex, currentPage) => {
   let wrapper = $("#wrapper");
 
@@ -29,22 +39,19 @@ const showCurrentPage = (renderedPageIndex, currentPage) => {
 const btnShower = (page, lastPage) => {
   if (page === 0) {
     // first page
-    $("#prevBtn").removeClass("shown");
-    $("#prevBtn").addClass("hidden");
-
-    $("nextBtn").removeClass("hidden");
-    $("#nextBtn").addClass("shown");
+    hideComponent($("#prevBtn"));
+    showComponent($("#nextBtn"));
 
     $("#nextBtn").html("Next");
   }
   if (page >= 1 && page < lastPage - 1) {
-    $("#prevBtn").addClass("shown");
-    $("#nextBtn").addClass("shown");
+    showComponent($("#prevBtn"));
+    showComponent($("#nextBtn"));
   }
 
   if (page === lastPage - 1) {
-    $("#prevBtn").addClass("shown");
-    $("#nextBtn").addClass("shown");
+    showComponent($("#prevBtn"));
+    showComponent($("#nextBtn"));
     $("#nextBtn").html("Send");
   }
 
@@ -63,11 +70,8 @@ const createForms = (json) => {
     currentPage++;
     let nextPageSection = $("#multiStep" + currentPage);
     let currentPageSection = $("#multiStep" + (currentPage - 1));
-    currentPageSection.removeClass("shown");
-    currentPageSection.addClass("hidden");
-
-    nextPageSection.removeClass("hidden");
-    nextPageSection.addClass("shown");
+    hideComponent(currentPageSection);
+    showComponent(nextPageSection);
     btnShower(currentPage, lastPage);
   });
 
@@ -75,11 +79,8 @@ const createForms = (json) => {
     currentPage--;
     let prevPageSection = $("#multiStep" + currentPage);
     let currentPageSection = $("#multiStep" + (currentPage + 1));
-    currentPageSection.removeClass("shown");
-    currentPageSection.addClass("hidden");
-
-    prevPageSection.removeClass("hidden");
-    prevPageSection.addClass("shown");
+    hideComponent(currentPageSection);
+    showComponent(prevPageSection);
     btnShower(currentPage, lastPage);
   });
 

@@ -109,7 +109,7 @@ th {
   display: none !important;
 }
 .shown {
-  display: inline-block !important;
+  display: grid !important;
 }
 .text-center {
   text-align: center;
@@ -279,7 +279,13 @@ th {
   background: #f4f4f4;
   border: none;
   border-radius: 4px;
-  padding: 2px;
+  padding: 16px;
+}
+.select-form-input {
+  border-radius: 8px;
+  border: none;
+  background: #f4f4f4;
+  padding: 8px;
 }
 /* Nav */
 nav {

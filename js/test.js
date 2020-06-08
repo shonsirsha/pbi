@@ -1,13 +1,17 @@
 let jsonForm = [
   {
     sectionName: "Personal Details",
-    content: { fullName: "text", nationality: "text", sex: ["female", "male"] },
+    content: {
+      "Full Name": "text",
+      Nationality: "text",
+      Sex: ["female", "male"],
+    },
   },
   {
     sectionName: "Term Of Payment",
     content: {
-      paidBy: ["individually", "organization"],
-      paidUponArrival: ["cash", "credit", "bank transfer"],
+      "Paid By": ["individually", "organization"],
+      "Paid Upon My Arrival With": ["cash", "credit", "bank transfer"],
     },
   },
 ];
@@ -94,11 +98,13 @@ const createForms = (json) => {
         let pageSection = $("#multiStep" + i);
 
         if (Array.isArray(menuSection.content[inputName])) {
+          let inputNameWithSpaces = inputName;
+          inputName = inputName.replace(/\s/g, "");
           pageSection.append("<select id='" + inputName + "'>");
           let inputSelect = $("#" + inputName);
           // if the 'content' value for this particular key is an array, then create a select input with a unique id.
-
-          menuSection.content[inputName].forEach((x) => {
+          inputSelect.append("<option>" + inputNameWithSpaces + "</option>");
+          menuSection.content[inputNameWithSpaces].forEach((x) => {
             inputSelect.append("<option>" + x + "</option>");
           });
           //populate options (which are the content of the array) inside the select input created above.

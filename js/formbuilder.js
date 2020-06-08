@@ -4,14 +4,27 @@ let jsonForm = [
     content: {
       "Full Name": "text",
       Nationality: "text",
-      Sex: ["female", "male"],
+      Sex: ["Female", "Male"],
+      "Passport Number": "text",
     },
   },
   {
     sectionName: "Term Of Payment",
     content: {
-      "Paid By": ["individually", "organization"],
-      "Paid Upon My Arrival With": ["cash", "credit", "bank transfer"],
+      "Paid By": ["Individually", "Organization"],
+      "Paid Upon My Arrival With": ["Cash", "Credit", "Bank Transfer"],
+    },
+  },
+  {
+    sectionName: "Visa",
+    content: {
+      "We need your arrangement and sponsorship of an application for 6 month Social-Culture Visa or 1 year visa ": [
+        "No",
+        "Yes, 1 Year Student Visa",
+        "Yes, Social-Culture Visa for 6 months",
+      ],
+      "If so, from wich Indonesian embassy or consulate do you intend to get your visa (city/country)":
+        "text",
     },
   },
 ];
@@ -45,12 +58,13 @@ const btnShower = (page, lastPage) => {
     // first page
     hideComponent($("#prevBtn"));
     showComponent($("#nextBtn"));
-
     $("#nextBtn").html("Next");
   }
+
   if (page >= 1 && page < lastPage - 1) {
     showComponent($("#prevBtn"));
     showComponent($("#nextBtn"));
+    $("#nextBtn").html("Next");
   }
 
   if (page === lastPage - 1) {
@@ -59,7 +73,9 @@ const btnShower = (page, lastPage) => {
     $("#nextBtn").html("Send");
   }
 
-  $("#sectionTitle").html("<h3>" + jsonForm[page].sectionName + "</h3>");
+  $("#sectionTitle").html(
+    "<h3>" + [page + 1] + ". " + jsonForm[page].sectionName + "</h3>"
+  );
 };
 const createForms = (json) => {
   let currentPage = 0;
@@ -69,14 +85,14 @@ const createForms = (json) => {
   $("#nextBtn").on("click", () => {
     if (currentPage === lastPage - 1) {
       // send
-      alert("send");
+    } else {
+      currentPage++;
+      let nextPageSection = $("#multiStep" + currentPage);
+      let currentPageSection = $("#multiStep" + (currentPage - 1));
+      hideComponent(currentPageSection);
+      showComponent(nextPageSection);
+      btnShower(currentPage, lastPage);
     }
-    currentPage++;
-    let nextPageSection = $("#multiStep" + currentPage);
-    let currentPageSection = $("#multiStep" + (currentPage - 1));
-    hideComponent(currentPageSection);
-    showComponent(nextPageSection);
-    btnShower(currentPage, lastPage);
   });
 
   $("#prevBtn").on("click", () => {

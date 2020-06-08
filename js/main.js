@@ -46,4 +46,10 @@ $(document).ready(function () {
   $(".box6").on("click", () => {
     location.href = "./students-reviews.html";
   });
+  $(".showAllSections").on("click", () => {
+    $(".modal").fadeIn();
+  });
+  $(".close").on("click", () => {
+    $(".modal").fadeOut();
+  });
 });

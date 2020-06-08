@@ -226,20 +226,17 @@ th {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 16px;
-  grid-auto-rows: minmax(90px, auto);
 }
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 16px;
-  grid-auto-rows: minmax(90px, auto);
 }
 
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
-  grid-auto-rows: minmax(90px, auto);
 }
 
 .card-header-text {
@@ -282,8 +279,7 @@ th {
   background: #f4f4f4;
   border: none;
   border-radius: 4px;
-  padding: 32px;
-  height: 32px;
+  padding: 2px;
 }
 /* Nav */
 nav {
@@ -811,7 +807,6 @@ footer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 32px;
-    grid-auto-rows: minmax(90px, auto);
   }
 
   .hero > div:nth-child(even) {

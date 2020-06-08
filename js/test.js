@@ -100,7 +100,9 @@ const createForms = (json) => {
         if (Array.isArray(menuSection.content[inputName])) {
           let inputNameWithSpaces = inputName;
           inputName = inputName.replace(/\s/g, "");
-          pageSection.append("<select id='" + inputName + "'>");
+          pageSection.append(
+            "<select class='select-form-input' id='" + inputName + "'>"
+          );
           let inputSelect = $("#" + inputName);
           // if the 'content' value for this particular key is an array, then create a select input with a unique id.
           inputSelect.append("<option>" + inputNameWithSpaces + "</option>");

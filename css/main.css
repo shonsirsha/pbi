@@ -132,7 +132,9 @@ th {
   font-weight: bold;
   cursor: pointer;
 }
-
+.showAllSections {
+  cursor: pointer;
+}
 .hidden {
   display: none !important;
 }

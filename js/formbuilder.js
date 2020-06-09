@@ -77,7 +77,8 @@ const btnShower = (page, lastPage) => {
     showComponent($("#nextBtn"));
     $("#nextBtn").html("Submit");
   }
-
+  $(".goToSection").removeClass("text-bold");
+  $(".goToSection").eq(page).addClass("text-bold");
   $("#sectionTitle").html(
     "<h3>" + [page + 1] + ". " + jsonForm[page].sectionName + "</h3>"
   );

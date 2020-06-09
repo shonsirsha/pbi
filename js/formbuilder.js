@@ -75,7 +75,7 @@ const btnShower = (page, lastPage) => {
   if (page === lastPage - 1) {
     showComponent($("#prevBtn"));
     showComponent($("#nextBtn"));
-    $("#nextBtn").html("Send");
+    $("#nextBtn").html("Submit");
   }
 
   $("#sectionTitle").html(

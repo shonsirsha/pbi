@@ -581,6 +581,16 @@ ul {
   background: linear-gradient(rgba(0, 0, 0, 0.831), rgba(21, 21, 21, 0.831)),
     url("../imgs/box6.jpg");
 }
+.box7 {
+  grid-column: 1/4;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(21, 21, 21, 0.4)),
+    url("../imgs/box7.jpg");
+}
+
+.box7:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.831), rgba(21, 21, 21, 0.831)),
+    url("../imgs/box7.jpg");
+}
 .box {
   color: var(--light-color);
   display: flex;
@@ -693,6 +703,17 @@ footer {
   padding-bottom: 80px;
   background: linear-gradient(rgba(19, 19, 19, 0.3), rgba(19, 19, 19, 0.3)),
     url("../imgs/reviews.jpg");
+  background-size: cover;
+  background-position: center center; /* Center the image */
+  object-fit: cover;
+}
+
+/*reviews*/
+.hero-pic-register {
+  padding-top: 96px;
+  padding-bottom: 80px;
+  background: linear-gradient(rgba(19, 19, 19, 0.3), rgba(19, 19, 19, 0.3)),
+    url("../imgs/box7.jpg");
   background-size: cover;
   background-position: center center; /* Center the image */
   object-fit: cover;

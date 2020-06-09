@@ -105,6 +105,9 @@ th {
   display: flex;
   justify-content: center;
 }
+.text-bold {
+  font-weight: bold;
+}
 
 .modal {
   display: none;

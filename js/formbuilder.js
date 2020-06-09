@@ -111,17 +111,31 @@ const createForms = (json) => {
   });
   json.forEach((menuSection, i) => {
     showCurrentPage(i, currentPage);
-    $("#allSectionNames").append(
-      "<p myid='" +
-        i +
-        "' id='sectionNumber" +
-        i +
-        "' class='goToSection'>" +
-        (i + 1) +
-        ". " +
-        menuSection.sectionName +
-        "</p> <br/>"
-    );
+    if (i === 0) {
+      $("#allSectionNames").append(
+        "<p myid='" +
+          i +
+          "' id='sectionNumber" +
+          i +
+          "' class='goToSection text-bold'>" +
+          (i + 1) +
+          ". " +
+          menuSection.sectionName +
+          "</p> <br/>"
+      );
+    } else {
+      $("#allSectionNames").append(
+        "<p myid='" +
+          i +
+          "' id='sectionNumber" +
+          i +
+          "' class='goToSection'>" +
+          (i + 1) +
+          ". " +
+          menuSection.sectionName +
+          "</p> <br/>"
+      );
+    }
     for (var inputName in menuSection.content) {
       // loops through the 'content' obj
 
@@ -163,6 +177,8 @@ createForms(jsonForm);
 $(".goToSection").click(function () {
   hideComponent($(".multiStep"));
   showComponent($("#multiStep" + $(this).attr("myid")));
+  $(".goToSection").removeClass("text-bold");
+  $(this).addClass("text-bold");
   let myIdInt = parseInt($(this).attr("myid"));
   currentPage = myIdInt;
   $("#sectionTitle").html(

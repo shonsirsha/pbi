@@ -6,6 +6,10 @@ let jsonForm = [
       Nationality: "text",
       Sex: ["Female", "Male"],
       "Passport Number": "text",
+      Email: "email",
+      "Phone / Whatsapp": "text",
+      "Present Address": "text",
+      "Address in Yogyakarta (if any)": "text",
     },
   },
   {
@@ -18,13 +22,12 @@ let jsonForm = [
   {
     sectionName: "Visa",
     content: {
-      "We need your arrangement and sponsorship of an application for 6 month Social-Culture Visa or 1 year visa ": [
+      "Arrangement and sponsorship of an application for 6 month Social-Culture Visa or 1 year visa ": [
         "No",
         "Yes, 1 Year Student Visa",
         "Yes, Social-Culture Visa for 6 months",
       ],
-      "If so, from wich Indonesian embassy or consulate do you intend to get your visa (city/country)":
-        "text",
+      "Indonesian Embassy (City / Country)": "text",
     },
   },
 ];

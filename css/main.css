@@ -324,7 +324,11 @@ select {
   border: none;
   background-color: #f4f4f4;
 }
-
+option {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 select {
   -webkit-appearance: none;
   -moz-appearance: none;

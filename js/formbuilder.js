@@ -17,17 +17,31 @@ let jsonForm = [
     content: {
       "Paid By": ["Individually", "Organization"],
       "Paid Upon My Arrival With": ["Cash", "Credit", "Bank Transfer"],
+      Lorem: "text",
+      "Ipsum Dolor": "text",
+      Test: ["Test", "Teest2"],
+      "Dummy Content1": ["Dummy", "Credit", "Bank Transfer"],
+      Dummy2: ["Test", "Teest2"],
+      "Dummy Content3": "text",
     },
   },
   {
     sectionName: "Visa",
     content: {
-      "Arrangement and sponsorship of an application for 6 month Social-Culture Visa or 1 year visa ": [
+      "6 month Social-Culture Visa or 1 year visa ": [
         "No",
         "Yes, 1 Year Student Visa",
         "Yes, Social-Culture Visa for 6 months",
       ],
       "Indonesian Embassy (City / Country)": "text",
+      "Paid By": ["Individually", "Organization"],
+      Xxxxx: ["Xxxx", "Xxx", "Xx xxXxx"],
+      Test2: "text",
+      Test3: "text",
+      Test4: ["Test", "Teest2"],
+      "Dummy Content 4": ["Dummy", "Credit", "Bank Transfer"],
+      Dummy5: ["Test", "Teest2"],
+      Test6: "text",
     },
   },
 ];

@@ -19,56 +19,57 @@
     <script src="js/main.js"></script>
   </head>
   <body>
-    <nav>
-      <div class="main-nav container">
-        <div class="flex-horizontal">
-          <div class="brand">
-            <a href="./index.html"><img src="imgs/logo.png" /></a>
+    <div>
+      <nav>
+        <div class="main-nav container">
+          <div class="flex-horizontal">
+            <div class="brand">
+              <a href="./index.html"><img src="imgs/logo.png" /></a>
+            </div>
+          </div>
+
+          <ul class="main-menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about-us.html">About Us</a></li>
+            <li><a href="./courses.html">Courses and Fees</a></li>
+            <li><a href="./activities.html">Activities</a></li>
+            <li><a href="./accommodations.html">Accommmodations</a></li>
+            <li><a href="#">Registration</a></li>
+            <li><a href="./yogyakarta.html">Yogyakarta</a></li>
+            <li><a href="./students-reviews.html">Reviews</a></li>
+          </ul>
+
+          <div id="menu" class="menu-btn flex-horizontal">
+            <i class="fas fa-bars mr-8"></i>
+
+            <p class="small">Menu</p>
           </div>
         </div>
+      </nav>
 
-        <ul class="main-menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./about-us.html">About Us</a></li>
-          <li><a href="./courses.html">Courses and Fees</a></li>
-          <li><a href="./activities.html">Activities</a></li>
-          <li><a href="./accommodations.html">Accommmodations</a></li>
-          <li><a href="#">Registration</a></li>
-          <li><a href="./yogyakarta.html">Yogyakarta</a></li>
-          <li><a href="./students-reviews.html">Reviews</a></li>
-        </ul>
-
-        <div id="menu" class="menu-btn flex-horizontal">
-          <i class="fas fa-bars mr-8"></i>
-
-          <p class="small">Menu</p>
+      <div class="menu-overlay"></div>
+      <div class="hero hero-100percent">
+        <div class="hero-pic hero-pic-register">
+          <h1 class="h1-style light">Registration</h1>
         </div>
       </div>
-    </nav>
+      <div class="container">
+        <div class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="allSectionNames"></div>
+          </div>
+        </div>
+        <section id="sectionTitle"></section>
 
-    <div class="menu-overlay"></div>
-    <div class="hero hero-100percent">
-      <div class="hero-pic hero-pic-register">
-        <h1 class="h1-style light">Registration</h1>
-      </div>
-    </div>
-    <div class="page-wrapper container">
-      <div class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <div id="allSectionNames"></div>
+        <p class="mt-8 showAllSections"><u>Show All Sections</u></p>
+        <div id="wrapper" class="mt-32"></div>
+        <div class="btn-wrapper mt-32">
+          <button id="prevBtn" class="mt-32 btn btn-primary mr-8">Back</button>
+          <button id="nextBtn" class="mt-32 btn btn-primary">Next</button>
         </div>
       </div>
-      <section id="sectionTitle"></section>
-
-      <p class="mt-8 showAllSections"><u>Show All Sections</u></p>
-      <div id="wrapper" class="mt-32"></div>
-      <div class="btn-wrapper mt-32">
-        <button id="prevBtn" class="mt-32 btn btn-primary mr-8">Back</button>
-        <button id="nextBtn" class="mt-32 btn btn-primary">Next</button>
-      </div>
     </div>
-
     <footer>
       <div class="container footer-wrapper">
         <div>
